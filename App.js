@@ -9,6 +9,8 @@
 import React, {Component} from 'react';
 import {Button, StyleSheet, Text, View, Alert} from 'react-native';
 
+
+//Criei uma funçãp para gerar numeros aleatorios
 const gerarNumeroAleatorio = () =>{
   let total = '';
   for (let index =0; index < 6; index++) {
@@ -17,14 +19,16 @@ const gerarNumeroAleatorio = () =>{
     total += `${numero}-`
   }
   
- 
+ //Alert é utilizado para exibir informações em forma d ealerta
   Alert.alert("Número Gerado",`${total}`);
 }
 
 export default class App extends Component {
   render() {
     return (
-      <View>
+      // O Button esta utilizando o Onpress para chamar uma função
+      // Quando tocar no botão que tem o nome Gerar Numero
+      <View> 
         <Button title="Gerar número" onPress={gerarNumeroAleatorio} /> 
      
       </View>
